@@ -19,6 +19,12 @@ class Usuario {
         this.libros.map((l)=>{
             console.log(`${l.nombreLibro}`)})
         }
+    getBooksAutor(libros){
+        this.libros.map((l)=>{
+            console.log(`${l.autorLibro}`);
+        }
+        )
+    }
     addBook(nombreLibro, autorLibro){
         this.libros.push({nombreLibro, autorLibro})
     }
@@ -29,6 +35,6 @@ class Usuario {
     persona.getFullName();
     persona.addMascota("Roger");
     persona.countMascotas();
-    persona.addBook("El psicoanalista")
-    persona.addBook("John Katzenbach")
+    persona.addBook("El psicoanalista", "John Katzenbach")
     persona.getBooksNames();
+    persona.getBooksAutor();
